@@ -1,0 +1,151 @@
+/* Reset browser default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+#navbar {
+    width: 100%;
+    background-color: #596f94;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+#navbar img {
+    height: 60px;
+    width: auto;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+#navbar a:hover {
+    background-color: #003c9e;
+    border-radius: 4px;
+}
+
+/* ===== HERO SECTION WITH OVERLAY TEXT ===== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdUueB4LMnExw7eIxeahrm_LrXW0y8po81CQ&s");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Optional dark overlay for readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Text stays above overlay */
+.hero h1,
+.hero p,
+.hero .cta-btn {
+    position: relative;
+    z-index: 1;
+}
+
+/* CTA Button */
+.cta-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #001f54;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s all ease;
+}
+
+.cta-btn:hover {
+    background: #003c9e;
+}
+
+/* ===== Form Section ===== */
+.registration-section {
+    width: 450px;
+    margin: 50px auto;
+    background: #f8f8f8;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #001f54;
+}
+
+/* Input Rows */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+/* Label Style */
+.input-box label {
+    font-weight: bold;
+}
+
+/* Input Style */
+.input-box input {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #001f54;
+}
+
+/* Submit Buttons */
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    flex: 1;
+    background: #001f54;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #003c9e;
+}
