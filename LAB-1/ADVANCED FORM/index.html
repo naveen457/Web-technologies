@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            width: 400px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>User Registration</h2>
+
+    <form>
+
+        <!-- Full Name -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="9876543210" required>
+
+        <!-- Password -->
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+
+        <!-- Profile Picture -->
+        <label for="profile">Choose Profile Picture</label>
+        <input type="file" id="profile" required>
+
+        <!-- Terms and Conditions -->
+        <label>
+            <input type="checkbox" required>
+            I accept the Terms & Conditions
+        </label>
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+
+</html>
