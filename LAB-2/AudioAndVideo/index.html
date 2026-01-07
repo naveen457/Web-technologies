@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multimedia Web Page</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 90%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        .media-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        audio,
+        video {
+            width: 100%;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .time-display {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .time-display span {
+            font-weight: 600;
+            color: #333;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+        }
+
+        @media (min-width: 768px) {
+            .media-section {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🎵 Multimedia Web Page</h1>
+
+        <div class="media-section">
+
+            <!-- Audio Card -->
+            <div class="card">
+                <h2>Audio Player</h2>
+                <audio id="myAudio" controls>
+                    <source src="./Ayudha Pooja.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="time-display">
+                    Current audio time: <span id="audioTime">0.00</span> s
+                </div>
+            </div>
+
+            <!-- Video Card -->
+            <div class="card">
+                <h2>Video Player</h2>
+                <video id="myVideo" controls autoplay muted>
+                    <source src="./file_example_MP4_640_3MG.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="time-display">
+                    Current video time: <span id="videoTime">0.00</span> s
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            HTML5 Audio & Video Example
+        </footer>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+        const video = document.getElementById('myVideo');
+
+        const audioTimeSpan = document.getElementById('audioTime');
+        const videoTimeSpan = document.getElementById('videoTime');
+
+        audio.addEventListener('timeupdate', () => {
+            audioTimeSpan.textContent = audio.currentTime.toFixed(2);
+        });
+
+        video.addEventListener('timeupdate', () => {
+            videoTimeSpan.textContent = video.currentTime.toFixed(2);
+        });
+    </script>
+
+</body>
+
+</html>

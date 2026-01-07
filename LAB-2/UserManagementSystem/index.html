@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>User Management with localStorage</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>User Registration & Management</h1>
+
+        <div id="message" class="message"></div>
+
+        <!-- Registration Form -->
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number *</label>
+                <input type="tel" id="mobile" minlength="10" maxlength="10" pattern="[0-9]{10}" required />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" minlength="6" required />
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit" class="btn-primary">Register User</button>
+                <button type="button" id="clearAllBtn" class="btn-danger" style="margin-left:10px;">
+                    Clear All Users
+                </button>
+            </div>
+        </form>
+
+        <!-- Users Table -->
+        <h2>Registered Users</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="usersTableBody">
+                <!-- Rows added dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
