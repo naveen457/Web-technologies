@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive Registration</title>
+    <style>
+        ~.error {
+            color: red;
+            font-size: 0.8rem;
+        }
+
+        .invalid {
+            border: 1px solid red;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="registrationForm" novalidate>
+        <label>
+            Name:
+            <input type="text" id="name" />
+            <span class="error" id="nameError"></span>
+        </label><br><br>
+
+        <label>
+            Email:
+            <input type="email" id="email" />
+            <span class="error" id="emailError"></span>
+        </label><br><br>
+
+        <label>
+            Password:
+            <input type="password" id="password" />
+            <span class="error" id="passwordError"></span>
+        </label><br><br>
+
+        <label>
+            Confirm Password:
+            <input type="password" id="confirmPassword" />
+            <span class="error" id="confirmPasswordError"></span>
+        </label><br><br>
+
+        <label>
+            Age:
+            <input type="number" id="age" />
+            <span class="error" id="ageError"></span>
+        </label><br><br>
+
+        <label>
+            Role:
+            <select id="role">
+                <option value="">Select role</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="admin">Admin</option>
+            </select>
+            <span class="error" id="roleError"></span>
+        </label><br><br>
+
+        <!-- Dynamic field: Skills (for Teacher/Admin) or Courses (for Student) -->
+        <div id="skillsWrapper" class="hidden">
+            <label>
+                Skills:
+                <input type="text" id="skills" placeholder="e.g., JavaScript, React" />
+                <span class="error" id="skillsError"></span>
+            </label><br><br>
+        </div>
+
+        <div id="studentIdWrapper" class="hidden">
+            <label>
+                Student ID:
+                <input type="text" id="studentId" />
+                <span class="error" id="studentIdError"></span>
+            </label><br><br>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
