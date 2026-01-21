@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time User Activity Monitor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .monitor-panel {
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        button.secondary {
+            background-color: #95a5a6;
+        }
+
+        button.secondary:hover {
+            background-color: #7f8c8d;
+        }
+
+        button.danger {
+            background-color: #e74c3c;
+        }
+
+        button.danger:hover {
+            background-color: #c0392b;
+        }
+
+        .log-container {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            background-color: #fcfcfc;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .log-item {
+            padding: 4px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .log-item:last-child {
+            border-bottom: none;
+        }
+
+        .log-item.click {
+            color: #27ae60;
+        }
+
+        .log-item.key {
+            color: #2980b9;
+        }
+
+        .log-item.focus {
+            color: #f39c12;
+        }
+
+        .log-item.bubble {
+            color: #7f8c8d;
+        }
+
+        .log-item.capture {
+            color: #9b59b6;
+            font-style: italic;
+        }
+
+        .warning {
+            background: #f8d7da;
+            color: #721c24 !important;
+            border-left: 4px solid #dc3545;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .sample-ui {
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sample-ui h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .sample-ui input,
+        .sample-ui button,
+        .sample-ui textarea {
+            margin: 8px 0;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .sample-ui textarea {
+            width: 100%;
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .sample-ui button {
+            background-color: #1abc9c;
+            color: white;
+        }
+
+        .sample-ui button:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Real-Time User Activity Monitor</h1>
+
+        <!-- Controls -->
+        <div class="monitor-panel">
+            <div class="controls">
+                <button id="resetBtn">Reset Log</button>
+                <button id="exportBtn">Export Log</button>
+            </div>
+            <div id="warningArea"></div>
+            <div class="log-container" id="logContainer"></div>
+        </div>
+
+        <!-- Sample UI to test events -->
+        <div class="sample-ui">
+            <h2>Test Area</h2>
+            <input type="text" placeholder="Type here to test keypress" />
+            <input type="password" placeholder="Enter password" />
+            <textarea placeholder="Multi-line text area"></textarea>
+            <button id="testBtn">Click Me</button>
+            <button id="testBtn2">Another Button</button>
+        </div>
+    </div>
+
+    <script src="script.js~"></script>
+</body>
+
+</html>
