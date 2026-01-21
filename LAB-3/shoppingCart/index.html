@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Rule‑Driven Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1>Smart Shopping Cart</h1>
+
+    <!-- Product list to add from -->
+    <section class="products">
+        <h2>Products</h2>
+        <div class="product" data-name="Apple" data-price="50" data-category="grocery">
+            <span>Apple (Grocery) - ₹50</span>
+            <button class="add-btn">Add</button>
+        </div>
+        <div class="product" data-name="T‑Shirt" data-price="400" data-category="fashion">
+            <span>T‑Shirt (Fashion) - ₹400</span>
+            <button class="add-btn">Add</button>
+        </div>
+        <div class="product" data-name="Laptop" data-price="50000" data-category="electronics">
+            <span>Laptop (Electronics) - ₹50,000</span>
+            <button class="add-btn">Add</button>
+        </div>
+    </section>
+
+    <!-- Cart -->
+    <section class="cart">
+        <h2>Your Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Price (₹)</th>
+                    <th>Qty</th>
+                    <th>Subtotal (₹)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cartBody"></tbody>
+        </table>
+
+        <div class="coupon-area">
+            <label for="coupon">Coupon code:</label>
+            <input type="text" id="coupon" placeholder="e.g., BULK10, CAT-FASHION-5" />
+            <button id="applyCouponBtn">Apply Coupon</button>
+            <p id="couponMessage" class="info"></p>
+        </div>
+
+        <div class="totals">
+            <p>Base Total: ₹<span id="baseTotal">0</span></p>
+            <p>Discounts: -₹<span id="discountTotal">0</span></p>
+            <p><strong>Final Total: ₹<span id="finalTotal">0</span></strong></p>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
