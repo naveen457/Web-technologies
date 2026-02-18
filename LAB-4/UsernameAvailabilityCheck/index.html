@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Username Checker</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 15px;
+        }
+
+        #status {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .available {
+            color: green;
+        }
+
+        .taken {
+            color: red;
+        }
+
+        .loading {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Register</h2>
+
+    <form id="registerForm">
+
+        <label>Username:</label><br><br>
+
+        <input type="text" id="username" required>
+
+        <div id="status"></div><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
