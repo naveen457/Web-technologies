@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "id": "P101",
+            "name": "Laptop",
+            "category": "Electronics",
+            "price": 60000,
+            "stock": 10
+        },
+        {
+            "id": "P102",
+            "name": "Mouse",
+            "category": "Electronics",
+            "price": 800,
+            "stock": 3
+        },
+        {
+            "id": "P103",
+            "name": "Notebook",
+            "category": "Stationery",
+            "price": 50,
+            "stock": 40
+        }
+    ]
+}
