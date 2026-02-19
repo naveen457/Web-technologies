@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Library Book Tracker</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        input {
+            margin: 5px;
+            padding: 6px;
+        }
+
+        button {
+            padding: 6px 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #msg {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Library Book Tracker</h2>
+
+    <!-- Input Form -->
+
+    <input type="text" id="bid" placeholder="Book ID">
+    <input type="text" id="title" placeholder="Title">
+    <input type="text" id="author" placeholder="Author">
+    <select id="status">
+        <option value="">Select Status</option>
+        <option value="Available">Available</option>
+        <option value="Issued">Issued</option>
+    </select>
+
+    <br>
+
+    <button onclick="addBook()">Add Book</button>
+    <button onclick="updateBook()">Update Status</button>
+    <button onclick="deleteBook()">Delete Book</button>
+
+    <div id="msg"></div>
+
+    <!-- Table -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody id="bookTable"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

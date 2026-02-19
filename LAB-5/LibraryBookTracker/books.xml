@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+
+    <book>
+        <id>B101</id>
+        <title>Java Programming</title>
+        <author>Herbert Schildt</author>
+        <status>Available</status>
+    </book>
+
+    <book>
+        <id>B102</id>
+        <title>Python Crash Course</title>
+        <author>Eric Matthes</author>
+        <status>Issued</status>
+    </book>
+
+</library>
