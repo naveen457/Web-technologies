@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e8eaec 0%, #00f2fe 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .result-box {
+            background: rgba(53, 31, 31, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .result-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        #result1 {
+            border-top: 4px solid #4facfe;
+        }
+
+        #result2 {
+            border-top: 4px solid #19292a;
+        }
+
+        #result1::before {
+            content: "📚 Original Student";
+            display: block;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #4facfe;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        #result2::before {
+            content: "⭐ Updated Student";
+            display: block;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #4facfe;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        strong,
+        b {
+            color: #4facfe;
+            font-weight: 700;
+        }
+
+        br {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Object Destructuring</h1>
+    <div class="container">
+        <div>
+            <p id="result1"></p>
+        </div>
+        <div>
+            <p id="result2"></p>
+        </div>
+    </div>
+
+    <script>
+        const student = { id: "23BCE9787", name: "naveen tanikonda", dept: "CSE", marks: 80 };
+        const { id, name, dept, marks } = student;
+
+        document.getElementById("result1").innerHTML = `
+            <strong>ID:</strong> ${id}<br>
+            <strong>Name:</strong> ${name}<br>
+            <strong>Department:</strong> ${dept}<br>
+            <strong>Marks:</strong> ${marks}
+        `;
+
+        const updatedStudent = {
+            student,
+            grade: 'A'
+        };
+
+        document.getElementById("result2").innerHTML = `
+            <strong>ID:</strong> ${id}<br>
+            <strong>Name:</strong> ${name}<br>
+            <strong>Department:</strong> ${dept}<br>
+            <strong>Marks:</strong> ${marks}<br>
+            <strong>Grade:</strong> ${updatedStudent.grade}
+        `;
+    </script>
+</body>
+
+</html>
