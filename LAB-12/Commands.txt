@@ -1,0 +1,12 @@
+// Commands to create a React app using terminal:
+// 1. npx create-react-app apicalls
+// 2. cd apicalls
+// 3. npm start
+
+// node server.js
+
+postman to verify post ,get,put and delete commands in the lab 11 and 12
+
+//restricted Scripts
+//Set-ExecutionPolicy -Scope Process -ExecutionPolicy ByPass
+// npm install express mongodb cors for lab 7
