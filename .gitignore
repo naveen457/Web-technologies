@@ -2,4 +2,6 @@ config.js
 LAB-7/student-notes-manager/node_modules
 LAB-7/BookStore/node_modules/
 *.docx
-./node_modules
+**/node_modules
+*.log
+*.env
